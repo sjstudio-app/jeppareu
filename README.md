@@ -35,7 +35,7 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 
 > **시스템 요구사항**:
 > - Apple Silicon Mac (M1 / M2 / M3 / M4)
-> - macOS 14.0 (Sonoma) 이상
+> - macOS 15.0 (Sequoia) 이상
 > - Apple Developer ID 정식 코드 서명 및 Apple Notarization(공증) 완료
 
 ---

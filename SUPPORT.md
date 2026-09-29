@@ -91,7 +91,7 @@
 ### 버그 신고 (Bug Report)
 문제가 발생한 경우 [GitHub Issues](https://github.com/sjstudio-app/jeppareu/issues)에서 **New Issue**를 생성해 주세요. 빠른 원인 파악을 위해 다음 정보를 포함해 주시면 도움이 됩니다:
 
-1. **macOS 버전**: (예: macOS 14.5 Sonoma, Apple Silicon M1/M2/M3)
+1. **macOS 버전**: (예: macOS 15.5 Sequoia, Apple Silicon M1/M2/M3)
 2. **증상 설명**: 기대했던 동작과 실제로 발생한 현상
 3. **재현 단계**: 문제를 재현할 수 있는 구체적인 순서
 4. **손쉬운 사용 권한 부여 여부**: 허용됨 / 허용되지 않음
