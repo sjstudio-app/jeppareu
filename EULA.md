@@ -1,6 +1,6 @@
 # End User License Agreement (EULA)
 
-**Last Updated:** September 11, 2026<br>
+**Last Updated:** October 5, 2026<br>
 **Applies to:** Jeppareu (제빠르)
 
 PLEASE READ THIS END USER LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE DOWNLOADING, INSTALLING, OR USING JEPPAREU ("SOFTWARE"). BY DOWNLOADING, INSTALLING, OR USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT.
@@ -17,7 +17,7 @@ Jeppareu (제빠르) is proprietary software developed by SJ Studio. All intelle
 
 ## 2. License Grant (Free Proprietary Use)
 
-Subject to your compliance with this Agreement, you are granted a limited, non-exclusive, non-transferable, revocable license to download, install, and run Jeppareu for personal or commercial use on Apple Silicon Mac computers running macOS 14.0 or later that you own or control.
+Subject to your compliance with this Agreement, you are granted a limited, non-exclusive, non-transferable, revocable license to download, install, and run Jeppareu for personal or commercial use on Apple Silicon Mac computers running macOS 15.0 or later that you own or control.
 
 - **The current release is provided free of charge.**
 - There are no subscription fees, payment paywalls, or hidden charges.
