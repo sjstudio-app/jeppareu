@@ -44,6 +44,12 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
   - 전역 단축키(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>T</kbd>)로 호출되는 가볍고 독립적인 번역 패널
   - 클립보드 항목 번역(<kbd>⌘</kbd> <kbd>K</kbd> → `Translate This`)
   - 번역 기록(Translations 모드) 보관, 원문/번역문 언어 방향 전환(<kbd>⌘</kbd> <kbd>S</kbd>), 재번역(<kbd>⌘</kbd> <kbd>O</kbd>), 고정(<kbd>⌘</kbd> <kbd>P</kbd>), 삭제(<kbd>⌘</kbd> <kbd>⌫</kbd>), 원문 복사(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd>)
+- **국어·영한/한영 사전 및 백과사전 (<kbd>?</kbd>)**
+  - <kbd>?</kbd> 접두어 입력 시 모드 전환 없이 즉시 인라인 사전 검색 환경으로 진입 (`Dictionary` 칩 뱃지)
+  - <kbd>?</kbd> 단독 입력 시 최근 조회한 사전 단어 기록 최신순 탐색 (<kbd>⌘</kbd> <kbd>⌫</kbd>로 삭제)
+  - <kbd>?</kbd> 뒤 단어 입력 시 macOS 로컬 시스템 사전(국어/영한/한영) 저지연 실시간 검색 및 뜻풀이 즉시 확인
+  - 단어 뜻풀이 붙여넣기(<kbd>Return</kbd>), 복사(<kbd>⌘</kbd> <kbd>C</kbd>), macOS 사전 앱에서 열기(<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>)
+  - 백과사전 정적 검색 행 선택 시 위키백과 표제어 요약문 및 썸네일 온디맨드 비동기 로딩 (타이핑 중 네트워크 통신 0건 보장)
 - **프로젝트 빠른 열기 (Project Open)**
   - 전용 전역 단축키(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>)로 프로젝트 선택기를 호출하여 로컬 개발 프로젝트를 VS Code에서 즉시 오픈
 - **파일 시스템 경로 및 자동완성 (Path Handling & Completion)**
@@ -58,7 +64,7 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
   - 런처 하단 28pt 푸터(Footer)에서 현재 상황에 맞는 핵심 단축키 실시간 안내
 - **Local-First & 프라이버시 보호**
   - 모든 클립보드 이력과 데이터는 사용자 Mac 내 로컬에만 안전하게 저장됩니다.
-  - 외부 통신, 클라우드 동기화, 사용자 분석 텔레메트리 SDK를 일체 포함하지 않습니다.
+  - 사용자가 백과사전 행을 명시적으로 선택해 위키백과 요약을 온디맨드로 조회하는 경우를 제외하고는, 외부 통신, 클라우드 동기화, 사용자 분석 텔레메트리 SDK를 일체 포함하지 않습니다.
 
 ---
 
@@ -81,7 +87,8 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 | 키 | 동작 |
 |---|---|
 | <kbd>↑</kbd> / <kbd>↓</kbd> | 결과 선택 이동 |
-| <kbd>Return</kbd> | 선택한 결과 실행 (기본 동작: 앱 실행 / 파일 열기 / 클립보드 붙여넣기) |
+| <kbd>?</kbd> | 사전 접두어 (단독 입력 시 최근 사전 기록 표시, ?단어 로 검색) |
+| <kbd>Return</kbd> | 선택한 결과 실행 (기본 동작: 앱 실행 / 파일 열기 / 클립보드·사전 뜻풀이 붙여넣기) |
 | <kbd>⌘</kbd> <kbd>1–9</kbd> | 상위 1~9번째 결과 즉시 실행 |
 | <kbd>⌘</kbd> <kbd>[</kbd> 또는 <kbd>⌘</kbd> <kbd>]</kbd> | 검색 모드 순환 (All ⇄ Clipboard ⇄ Files ⇄ Translations) |
 | <kbd>⌘</kbd> <kbd>P</kbd> | 클립보드 / 번역 항목 고정(Pin) 전환 |
@@ -89,9 +96,10 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 | <kbd>⌘</kbd> <kbd>Y</kbd> | 이미지 미리보기 창 열기 |
 | <kbd>⌘</kbd> <kbd>K</kbd> | 선택 항목 추가 액션 메뉴 |
 | <kbd>⌘</kbd> <kbd>R</kbd> | Finder에서 보기 (Reveal in Finder) |
-| <kbd>⌘</kbd> <kbd>C</kbd> | 텍스트 복사 / 경로 복사 (붙여넣지 않고 클립보드에 복사) |
+| <kbd>⌘</kbd> <kbd>C</kbd> | 텍스트 복사 / 경로 복사 / 사전 뜻풀이 복사 |
+| <kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd> | 사전 결과 항목을 macOS Dictionary.app에서 열기 |
 | <kbd>⇧</kbd> <kbd>↵</kbd> | 텍스트 클립보드 항목을 서식 없이 붙여넣기 |
-| <kbd>⌘</kbd> <kbd>⌫</kbd> | 선택한 클립보드 항목 삭제 |
+| <kbd>⌘</kbd> <kbd>⌫</kbd> | 선택한 클립보드 / 사전 기록 항목 삭제 |
 | <kbd>Tab</kbd> | 경로 자동완성 (경로 입력 시) / 웹 세션 진입 (일반 검색어 입력 시) |
 | <kbd>Esc</kbd> | 한 단계 뒤로 / 액션 메뉴 닫기 / 런처 닫기 |
 | <kbd>⌘</kbd> <kbd>Q</kbd> | Jeppareu 종료 |
