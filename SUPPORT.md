@@ -51,8 +51,9 @@
 ### 추가 작업 액션 메뉴 (<kbd>⌘</kbd> <kbd>K</kbd>)
 - 검색 결과 목록에서 특정 항목을 선택한 후 **<kbd>⌘</kbd> <kbd>K</kbd>**를 누르면 해당 항목이 지원하는 추가 액션 메뉴가 열립니다.
 - 액션 메뉴 내에서 <kbd>↑</kbd> / <kbd>↓</kbd> 방향키로 액션을 탐색하고 <kbd>Return</kbd>으로 실행하거나, <kbd>Esc</kbd> 또는 일반 문자를 입력하여 액션 메뉴를 닫고 검색으로 돌아올 수 있습니다.
-- **클립보드 항목 액션**: Paste (기본, <kbd>Return</kbd>), Copy to Clipboard (<kbd>⌘</kbd> <kbd>C</kbd>), Paste as Plain Text (<kbd>⇧</kbd> <kbd>↵</kbd>, 텍스트 항목), Translate This (텍스트 항목 번역), Open Preview, Delete from Clipboard History (<kbd>⌘</kbd> <kbd>⌫</kbd>), `Clear Last 15 Minutes…` / `Clear Last Hour…` / `Clear Today…`. 보류 중인 민감 항목에는 `Keep in History…`가 나타납니다.
-- **파일 항목 액션**: Open / Open Directory / Launch Application (기본, <kbd>Return</kbd>), Reveal in Finder (<kbd>⌘</kbd> <kbd>R</kbd>), Copy Path (<kbd>⌘</kbd> <kbd>C</kbd>), Open With….
+- **클립보드 항목 액션**: Paste (기본, <kbd>Return</kbd>), Copy to Clipboard (<kbd>⌘</kbd> <kbd>C</kbd>), Paste as Plain Text (<kbd>⇧</kbd> <kbd>↵</kbd>, 텍스트 항목), Transform Text… (11종 대소문자·케이스·인코딩·공백 변환 서브메뉴), Translate This (텍스트 항목 번역), Open Preview, Delete from Clipboard History (<kbd>⌘</kbd> <kbd>⌫</kbd>), `Clear Last 15 Minutes…` / `Clear Last Hour…` / `Clear Today…`. 보류 중인 민감 항목에는 `Keep in History…`가 나타납니다.
+- **파일 항목 액션**: Open / Open Directory / Launch Application (기본, <kbd>Return</kbd>), Reveal in Finder (<kbd>⌘</kbd> <kbd>R</kbd>), Copy Path (<kbd>⌘</kbd> <kbd>C</kbd>), Open in Terminal (<kbd>⌥</kbd> <kbd>↵</kbd>), Open With….
+- **계산기 항목 액션**: Copy and Close (기본, <kbd>Return</kbd>), Copy Result (<kbd>⌘</kbd> <kbd>C</kbd>).
 - **사전 항목 액션**: 뜻풀이 붙여넣기 (기본, <kbd>Return</kbd>), 뜻풀이 복사 (<kbd>⌘</kbd> <kbd>C</kbd>), 사전 앱에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>), 사전 기록에서 삭제 (<kbd>⌘</kbd> <kbd>⌫</kbd>, 히스토리 항목), 전체 사전 기록 삭제 (`Clear All Dictionary History…`).
 - 외부 검색 제공자는 <kbd>⌘</kbd> <kbd>K</kbd> 메뉴에 나오지 않습니다. 웹 검색은 <kbd>Tab</kbd>으로 들어가는 웹 세션에서 합니다(아래 「외부 검색」).
 - 프로젝트 피커에서는 <kbd>⌘</kbd> <kbd>K</kbd>가 동작하지 않습니다. 프로젝트는 <kbd>Return</kbd>으로 VS Code에서 열고, <kbd>⌘</kbd> <kbd>R</kbd>로 Finder에서 보거나 <kbd>⌘</kbd> <kbd>C</kbd>로 폴더 경로를 복사할 수 있습니다.
@@ -63,6 +64,7 @@
 - **General 탭**:
   - `Launcher Shortcut`: 새로운 단축키를 입력하여 등록. 시스템 단축키와 충돌 시 경고 메시지가 표시되며 이전 단축키로 안전하게 롤백됩니다.
   - `Default Search Mode`: 런처를 새로 호출할 때 기본으로 열릴 검색 모드(All, Clipboard, Files, Translations)를 지정합니다.
+  - `Preferred Terminal`: 파일 항목에서 터미널 열기(<kbd>⌥</kbd> <kbd>↵</kbd>) 액션에 사용할 기본 터미널 에뮬레이터(macOS Terminal, iTerm2, Ghostty, Warp, Alacritty)를 지정합니다. 시스템에 설치된 터미널만 선택할 수 있으며 기본값은 macOS Terminal입니다.
   - `Show in menu bar`: 메뉴 막대 아이콘 표시 여부(기본 켜짐). `Quit Jeppareu` 버튼으로 앱을 종료합니다.
   - `Translation`: 번역 엔진(Automatic, Apple Intelligence, System Translation, Off)과 선택 영역 번역 단축키(기본 <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>T</kbd>)의 변경 및 사용 여부를 설정합니다.
   - `Open Searches In` (Web Search): 외부 검색을 열 기본 브라우저를 지정합니다. macOS 기본 브라우저와 이 Mac에 설치된 브라우저만 목록에 나옵니다. 이미 골라 둔 브라우저를 지우면 목록에 `(not installed)`로 남습니다. 목록에 없는 브라우저는 아래 `Custom Browsers`의 `Add Browser…`로 `.app`을 골라 추가합니다. 웹 페이지(`http`/`https`)를 열지 못하는 앱이나 이미 목록에 있는 브라우저는 추가되지 않습니다. 기본 브라우저로 쓰던 사용자 추가 브라우저를 제거하면 macOS 기본 브라우저로 돌아갑니다.
@@ -91,6 +93,36 @@
 3. 원하는 항목에서 **<kbd>Return</kbd>**을 누르면 런처가 닫히고, 런처를 열기 직전에 사용 중이던 앱으로 돌아가 해당 항목을 자동으로 붙여넣습니다.
 4. **<kbd>⌘</kbd> <kbd>1–9</kbd>** 단축키를 눌러 상위 9개 결과를 즉시 붙여넣을 수도 있습니다.
 5. 복사만 하고 붙여넣지는 않으려면 <kbd>⌘</kbd> <kbd>K</kbd> > `Copy to Clipboard`(또는 <kbd>⌘</kbd> <kbd>C</kbd>)를 선택합니다.
+6. **출처 애플리케이션 필터링 (`app:` / `앱:`)**:
+   - 검색창에 `app:<앱이름>` 또는 `앱:<앱이름>`(예: `app:Safari`, `앱:Xcode`)을 입력하면 해당 앱에서 복사된 클립보드 항목만 즉시 필터링하여 탐색할 수 있습니다.
+   - 각 클립보드 행의 좌측에는 복사 당시의 출처 애플리케이션 아이콘(16×16)이 함께 표시됩니다.
+7. **텍스트 변환 (`Transform Text…`)**:
+   - 텍스트 항목에서 <kbd>⌘</kbd> <kbd>K</kbd> > `Transform Text…`를 선택하면 2단계 변환 서브메뉴가 열립니다.
+   - 대소문자(UPPERCASE, lowercase, Title Case), 프로그래밍 케이스(camelCase, snake_case, kebab-case), 공백 정리(Trim Whitespace), 인코딩/디코딩(Base64 Encode/Decode, URL Encode/Decode) 등 11종의 변환을 지원합니다.
+   - 원하는 변환 항목을 선택하고 <kbd>Return</kbd>을 누르면 즉시 변환된 텍스트가 대상 앱에 붙여넣어집니다 (<kbd>Esc</kbd>로 상위 메뉴 복귀).
+
+### 계산기 및 단위 변환 (Calculator & Unit Conversion)
+검색창에서 수학 수식이나 단위 변환을 입력하면 외부 네트워크나 디스크 I/O 없이 100% 완전 오프라인으로 결과를 실시간 계산하여 최상단에 제공합니다.
+
+- **수학 수식 계산**:
+  - 기본 연산: 덧셈(`+`), 뺄셈(`-`), 곱셈(`*`, `×`), 나눗셈(`/`, `÷`), 거듭제곱(`^`), 괄호 `(...)`, 백분율(`%`).
+  - 수학 함수: `sin`, `cos`, `tan`, `asin`, `acos`, `atan`, `sqrt`, `cbrt`, `log`, `log10`, `log2`, `ln`, `abs`, `round`, `floor`, `ceil`.
+  - 수학 상수: `pi` ($\pi$), `e`.
+  - 예시: `(120 + 35) * 4`, `sqrt(144) + 2^8`, `sin(pi / 2)`, `15% of 80`.
+- **단위 변환**:
+  - 길이/거리: `m`, `km`, `cm`, `mm`, `mi`, `yd`, `ft`, `in`.
+  - 무게/질량: `kg`, `g`, `mg`, `lb`, `oz`.
+  - 온도: `c`, `f`, `k`, `°C`, `°F` (섭씨 ⇄ 화씨 ⇄ 켈빈 정밀 변환).
+  - 데이터 용량: `B`, `KB`, `MB`, `GB`, `TB`, `PB` (1024 기반 IEC 바이너리 및 1000 기반 SI 표준 지원).
+  - 시간: `s`, `ms`, `min`, `h`, `d`, `wk`, `yr`.
+  - 자연스러운 변환 문법 지원: `100 km to mi`, `100km in mi`, `100km -> mi`, `100km = mi`.
+- **결과 표시 및 단축키**:
+  - 유효한 수식/변환 쿼리를 감지하면 최상단에 `CALC` 뱃지와 함께 실시간 계산 결과 행이 표시됩니다.
+  - 우측 프리뷰 영역(`CalculatorPreviewView`)에는 큰 글씨 결과값과 원본 입력 수식이 표시됩니다.
+  - <kbd>Return</kbd>: 계산 결과값을 클립보드에 복사하고 런처를 닫습니다 (`Copy and Close`).
+  - <kbd>⌘</kbd> <kbd>C</kbd>: 결과를 클립보드에 복사합니다 (`Copy Result`).
+  - <kbd>⌘</kbd> <kbd>K</kbd>: 추가 액션 메뉴에서 복사 액션을 선택할 수 있습니다.
+  - 일반 검색 텍스트나 파일 경로와 겹치지 않는 순수 연산식에만 트리거되며, 오프라인으로 5ms 미만으로 즉각 평가됩니다.
 
 ### 파일 시스템 검색 및 직접 경로 입력 (Files Search)
 - **직접 경로 입력 (Direct Path)**:
@@ -101,6 +133,9 @@
   - 디렉터리: Finder에서 해당 폴더를 엽니다.
   - 일반 파일: macOS 기본 연결 애플리케이션으로 파일을 엽니다.
   - 애플리케이션(`.app`): 해당 앱을 즉시 실행합니다.
+  - **터미널에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd>)**:
+    - 파일이나 디렉터리 항목에서 <kbd>⌥</kbd> <kbd>Return</kbd>(또는 <kbd>⌘</kbd> <kbd>K</kbd> > `Open in Terminal`)을 누르면 환경설정 **General** 탭에서 지정한 터미널 에뮬레이터(macOS Terminal, iTerm2, Ghostty, Warp, Alacritty)로 해당 디렉터리를 엽니다.
+    - 선택한 대상이 파일인 경우 해당 파일이 위치한 상위 디렉터리로 터미널 세션이 열립니다.
 
 ### 프로젝트 열기 (Project Open)
 1. 환경설정 **Projects** 탭에서 `Add Project…`로 자주 쓰는 프로젝트 디렉터리를 먼저 등록합니다. 위치 제한은 없으며, `~/code` 아래가 아니어도 됩니다.
