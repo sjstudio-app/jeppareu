@@ -51,15 +51,20 @@
 ### 추가 작업 액션 메뉴 (<kbd>⌘</kbd> <kbd>K</kbd>)
 - 검색 결과 목록에서 특정 항목을 선택한 후 **<kbd>⌘</kbd> <kbd>K</kbd>**를 누르면 해당 항목이 지원하는 추가 액션 메뉴가 열립니다.
 - 액션 메뉴 내에서 <kbd>↑</kbd> / <kbd>↓</kbd> 방향키로 액션을 탐색하고 <kbd>Return</kbd>으로 실행하거나, <kbd>Esc</kbd> 또는 일반 문자를 입력하여 액션 메뉴를 닫고 검색으로 돌아올 수 있습니다.
-- **클립보드 항목 액션**: Paste (기본, <kbd>Return</kbd>), Copy to Clipboard (<kbd>⌘</kbd> <kbd>C</kbd>), Paste as Plain Text (<kbd>⇧</kbd> <kbd>↵</kbd>, 텍스트 항목), Transform Text… (11종 대소문자·케이스·인코딩·공백 변환 서브메뉴), Translate This (텍스트 항목 번역), Open Preview, Delete from Clipboard History (<kbd>⌘</kbd> <kbd>⌫</kbd>), `Clear Last 15 Minutes…` / `Clear Last Hour…` / `Clear Today…`. 보류 중인 민감 항목에는 `Keep in History…`가 나타납니다.
+- **클립보드 항목 액션**: Paste (기본, <kbd>Return</kbd>), Copy to Clipboard (<kbd>⌘</kbd> <kbd>C</kbd>), Paste as Plain Text (<kbd>⇧</kbd> <kbd>↵</kbd>, 텍스트 항목), Collect / Uncollect (<kbd>⌃</kbd> <kbd>↵</kbd>), Paste Collected (<kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>↵</kbd>, 모은 항목이 있을 때), Transform Text… (11종 대소문자·케이스·인코딩·공백 변환 서브메뉴), Translate This (텍스트 항목 번역), Open Preview, Delete from Clipboard History (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>), `Clear Last 15 Minutes…` / `Clear Last Hour…` / `Clear Today…`. 보류 중인 민감 항목에는 `Keep in History…`가 나타납니다.
 - **파일 항목 액션**: Open / Open Directory / Launch Application (기본, <kbd>Return</kbd>), Reveal in Finder (<kbd>⌘</kbd> <kbd>R</kbd>), Copy Path (<kbd>⌘</kbd> <kbd>C</kbd>), Open in Terminal (<kbd>⌥</kbd> <kbd>↵</kbd>), Open With….
 - **계산기 항목 액션**: Copy and Close (기본, <kbd>Return</kbd>), Copy Result (<kbd>⌘</kbd> <kbd>C</kbd>).
-- **사전 항목 액션**: 뜻풀이 붙여넣기 (기본, <kbd>Return</kbd>), 뜻풀이 복사 (<kbd>⌘</kbd> <kbd>C</kbd>), 사전 앱에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>), 사전 기록에서 삭제 (<kbd>⌘</kbd> <kbd>⌫</kbd>, 히스토리 항목), 전체 사전 기록 삭제 (`Clear All Dictionary History…`).
+- **사전 항목 액션**: 뜻풀이 붙여넣기 (기본, <kbd>Return</kbd>), 뜻풀이 복사 (<kbd>⌘</kbd> <kbd>C</kbd>), 사전 앱에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>), 사전 기록에서 삭제 (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>, 히스토리 항목), 전체 사전 기록 삭제 (`Clear All Dictionary History…`).
 - 외부 검색 제공자는 <kbd>⌘</kbd> <kbd>K</kbd> 메뉴에 나오지 않습니다. 웹 검색은 <kbd>Tab</kbd>으로 들어가는 웹 세션에서 합니다(아래 「외부 검색」).
 - 프로젝트 피커에서는 <kbd>⌘</kbd> <kbd>K</kbd>가 동작하지 않습니다. 프로젝트는 <kbd>Return</kbd>으로 VS Code에서 열고, <kbd>⌘</kbd> <kbd>R</kbd>로 Finder에서 보거나 <kbd>⌘</kbd> <kbd>C</kbd>로 폴더 경로를 복사할 수 있습니다.
 
 ### 환경설정 (<kbd>⌘</kbd> <kbd>,</kbd>)
-런처가 활성화된 상태에서 **<kbd>⌘</kbd> <kbd>,</kbd>** (또는 앱 메뉴의 Settings)를 누르면 네이티브 설정 창이 열립니다. 탭은 네 개입니다.
+런처가 활성화된 상태에서 **<kbd>⌘</kbd> <kbd>,</kbd>** (또는 메뉴 막대의 Settings, 앱 재실행)를 누르면 설정 창이 열립니다. 런처가 떠 있던 화면에 열리고, 이미 열려 있으면 위치와 탭을 유지한 채 앞으로 옵니다. 탭은 네 개입니다.
+
+- **창 구성과 키보드 탐색**: 왼쪽 카테고리 사이드바와 오른쪽 설정 목록으로 나뉘며, 한 탭의 모든 섹션이 하나의 스크롤 영역에 이어집니다. 카테고리를 고르면 그 섹션의 첫 설정으로 이동합니다.
+  - <kbd>↑</kbd> <kbd>↓</kbd>: 카테고리 또는 설정 행 이동. <kbd>Return</kbd>: 스위치 전환, 메뉴 열기, 버튼 누르기, 단축키 녹화.
+  - <kbd>←</kbd> <kbd>→</kbd>, <kbd>⌘</kbd> <kbd>1–4</kbd>, <kbd>⌃</kbd> <kbd>Tab</kbd>: 탭 전환. <kbd>⌘</kbd> <kbd>W</kbd>: 창 닫기.
+  - <kbd>Esc</kbd>: 한 단계씩 물러나며(입력란 → 설정 목록 → 사이드바) 마지막에 창을 닫습니다. <kbd>⌘</kbd> <kbd>/</kbd>로 단축키 안내를 볼 수 있습니다.
 
 - **General 탭**:
   - `Launcher Shortcut`: 새로운 단축키를 입력하여 등록. 시스템 단축키와 충돌 시 경고 메시지가 표시되며 이전 단축키로 안전하게 롤백됩니다.
@@ -94,9 +99,16 @@
 4. **<kbd>⌘</kbd> <kbd>1–9</kbd>** 단축키를 눌러 상위 9개 결과를 즉시 붙여넣을 수도 있습니다.
 5. 복사만 하고 붙여넣지는 않으려면 <kbd>⌘</kbd> <kbd>K</kbd> > `Copy to Clipboard`(또는 <kbd>⌘</kbd> <kbd>C</kbd>)를 선택합니다.
 6. **출처 애플리케이션 필터링 (`app:` / `앱:`)**:
-   - 검색창에 `app:<앱이름>` 또는 `앱:<앱이름>`(예: `app:Safari`, `앱:Xcode`)을 입력하면 해당 앱에서 복사된 클립보드 항목만 즉시 필터링하여 탐색할 수 있습니다.
-   - 각 클립보드 행의 좌측에는 복사 당시의 출처 애플리케이션 아이콘(16×16)이 함께 표시됩니다.
-7. **텍스트 변환 (`Transform Text…`)**:
+   - 검색창에 `app:<앱이름>` 또는 `앱:<앱이름>`(예: `app:Safari`, `앱:텍스트`)을 입력하면 해당 앱에서 복사된 클립보드 항목만 즉시 필터링하여 탐색할 수 있습니다. macOS 선호 언어의 앱 이름, 영어 이름, 번들 ID(`app:com.apple.text`) 어느 것으로도 찾을 수 있습니다.
+   - 필터는 첫 공백에서 끝나므로 여러 단어 이름은 앞부분만 입력합니다(`앱:텍스트 편집기` 대신 `앱:텍스트`).
+   - 각 클립보드 행의 좌측에는 복사 당시의 출처 애플리케이션 아이콘(16×16)과 함께, 출처 앱 이름이 macOS 선호 언어로 표시됩니다(예: 한국어 환경에서 "텍스트 편집기").
+7. **모아 붙이기 (Paste Collected)**:
+   - 클립보드 항목에서 <kbd>⌃</kbd> <kbd>Return</kbd>을 누르면 그 항목을 모으고(Collect), 다시 누르면 뺍니다(Uncollect). 고른 순서대로 1, 2, 3… 번호 배지가 붙고, 검색어를 바꿔도 순서는 유지됩니다.
+   - <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>Return</kbd>을 누르면 모은 항목을 고른 순서대로 줄바꿈으로 이어 한 번에 붙여넣습니다.
+   - 하단의 `N개 모음` 버튼을 누르면 순서 확인, 항목별 빼기, 모두 비우기, 모아 붙이기를 할 수 있습니다.
+   - 일반 텍스트로 바꿀 수 있는 항목만 모을 수 있습니다(이미지·파일 목록·민감 항목 제외). 런처를 다시 열면 모은 목록은 비워집니다.
+   - 클립보드 행에서 <kbd>⌥</kbd> <kbd>Return</kbd>은 아무 동작도 하지 않습니다.
+8. **텍스트 변환 (`Transform Text…`)**:
    - 텍스트 항목에서 <kbd>⌘</kbd> <kbd>K</kbd> > `Transform Text…`를 선택하면 2단계 변환 서브메뉴가 열립니다.
    - 대소문자(UPPERCASE, lowercase, Title Case), 프로그래밍 케이스(camelCase, snake_case, kebab-case), 공백 정리(Trim Whitespace), 인코딩/디코딩(Base64 Encode/Decode, URL Encode/Decode) 등 11종의 변환을 지원합니다.
    - 원하는 변환 항목을 선택하고 <kbd>Return</kbd>을 누르면 즉시 변환된 텍스트가 대상 앱에 붙여넣어집니다 (<kbd>Esc</kbd>로 상위 메뉴 복귀).
@@ -123,6 +135,10 @@
   - <kbd>⌘</kbd> <kbd>C</kbd>: 결과를 클립보드에 복사합니다 (`Copy Result`).
   - <kbd>⌘</kbd> <kbd>K</kbd>: 추가 액션 메뉴에서 복사 액션을 선택할 수 있습니다.
   - 일반 검색 텍스트나 파일 경로와 겹치지 않는 순수 연산식에만 트리거되며, 오프라인으로 5ms 미만으로 즉각 평가됩니다.
+- **`=` 접두어와 검색 모드**:
+  - `=` 없이 입력한 수식(`1920x1080` 등)은 **All 모드에서만** 계산합니다. 계산 결과 행이 맨 위에 선택된 채로 나오고, 같은 검색어의 일반 결과가 그 아래에 이어집니다. 일반 결과를 쓰려면 <kbd>↓</kbd>로 내려갑니다.
+  - Clipboard · Files · Translations 모드에서는 `=` 없는 입력을 일반 검색어로 취급합니다. 계산하려면 앞에 `=`를 붙입니다.
+  - `=`로 시작하는 입력은 모든 모드에서 계산기가 목록을 차지합니다. 그래서 복사해 둔 `=SUM(A1:A3)` 같은 수식은 `=`를 빼고(`SUM(A1`) 검색해야 찾을 수 있습니다.
 
 ### 파일 시스템 검색 및 직접 경로 입력 (Files Search)
 - **직접 경로 입력 (Direct Path)**:
@@ -168,7 +184,7 @@
   - <kbd>⌘</kbd> <kbd>S</kbd>: 언어 방향 전환
   - <kbd>⌘</kbd> <kbd>O</kbd>: 다시 번역
   - <kbd>⌘</kbd> <kbd>P</kbd>: 번역 항목 고정(Pin) 토글
-  - <kbd>⌘</kbd> <kbd>⌫</kbd>: 번역 항목 삭제
+  - <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>: 번역 항목 삭제
 
 ### 이미지 프리뷰 (Image Preview)
 
@@ -190,15 +206,14 @@
   - `?` 뒤에 검색할 단어를 입력하면 macOS 로컬 사전(`DictionaryServices`)을 통해 국어사전, 영한/한영사전 표제어와 뜻풀이를 50ms 미만의 극히 낮은 지연 시간으로 실시간 검색합니다.
   - 메인 스레드를 차단하지 않는 백그라운드 액터 격리와 플레인 텍스트 정규화 파서를 통해 타이핑 반응성을 완벽히 보장합니다.
   - 검색 결과 목록의 최하단에는 정적 검색 행인 `[위키백과] '<단어>' 검색`이 항상 함께 제공됩니다.
-- **위키백과 온디맨드 로딩**:
-  - 사용자가 타이핑하는 동안에는 어떠한 외부 네트워크 요청도 발생하지 않습니다(0 request).
-  - 결과 목록에서 사용자가 위키백과 행을 방향키로 명시적으로 선택(하이라이트)했을 때만 프리뷰에서 Wikimedia REST API를 통해 비동기로 표제어 요약문과 썸네일을 로드합니다.
-  - 다른 행으로 이동하거나 검색어를 변경하면 진행 중이던 비동기 요청은 안전하게 무시됩니다.
+- **위키백과 행**:
+  - 위키백과 행의 프리뷰는 안내 문구만 보여 주며, <kbd>Return</kbd>을 누르면 기본 브라우저에서 위키백과 문서를 엽니다.
+  - 사전 기능은 네트워크에 접속하지 않습니다. 위키백과 요약을 불러오던 미리보기는 v0.6.0에서 제거되었습니다.
 - **단축키 및 인터랙션**:
-  - <kbd>Return</kbd>: 현재 활성 앱에 표제어 및 대표 뜻풀이를 즉시 붙여넣고 런처를 닫습니다.
+  - <kbd>Return</kbd>: `표제어: 짧은 뜻` 형식(예: `사과: an apple`)으로 직전 앱에 붙여넣고 런처를 닫습니다. 한글 검색어는 한영, 영문 검색어는 영한 사전의 뜻을 먼저 고르며, 붙여넣은 내용은 클립보드 기록에 남지 않습니다. <kbd>⇧</kbd> <kbd>Return</kbd>도 같은 텍스트를 붙여넣습니다.
   - <kbd>⌘</kbd> <kbd>C</kbd>: 전체 표제어 및 상세 정의 텍스트를 클립보드에 복사하고 런처를 닫습니다.
   - <kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>: macOS 사전 앱(Dictionary.app)을 열어 시스템 전체 사전에서 단어를 확인합니다 (`dict://`).
-  - <kbd>⌘</kbd> <kbd>⌫</kbd>: 선택한 사전 기록 항목을 히스토리에서 즉시 삭제합니다.
+  - <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>: 선택한 사전 기록 항목을 히스토리에서 즉시 삭제합니다.
 - **기록 저장 시점 (Save-on-use)**:
   - 검색 결과에 대해 <kbd>Return</kbd>(붙여넣기) 또는 <kbd>⌘</kbd> <kbd>C</kbd>(복사)를 실행한 시점에만 히스토리에 영구 저장됩니다.
   - 단순 타이핑, 훑어보기, 오타 검색, 위키백과 행 선택 등은 기록되지 않습니다.

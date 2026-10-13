@@ -32,14 +32,15 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
   - 타이핑 중 네트워크 및 디스크 I/O 0건의 100% 완전 오프라인 수식 평가 및 단위 변환 (`CALC` 칩 뱃지)
   - 사칙연산(`+`, `-`, `*`, `/`), 거듭제곱(`^`), 부호 반전, 과학적 표기법, 연산자 우선순위 괄호 지원
   - 단위 변환 지원: 길이/거리, 무게/질량, 온도, 데이터 바이트 용량, 시간 등
-  - 접두어 `=`를 통한 명시적 연산 및 자연스러운 암시적 수식/변환 자동 인식
+  - 접두어 `=`를 통한 명시적 연산(모든 모드) 및 자연스러운 암시적 수식/변환 자동 인식(All 모드에서만, 계산 결과가 맨 위에 추가되고 일반 결과가 그 아래에 이어짐)
   - 계산 결과 복사 및 런처 닫기(<kbd>Return</kbd>), 결과 복사(<kbd>⌘</kbd> <kbd>C</kbd>)
 - **클립보드 기록 (Clipboard History)**
   - 텍스트, 이미지, 파일 복사 이력을 로컬 SQLite에 영구 보관하고 상주 메모리 기반으로 즉시 검색
   - 한글 초성 검색(Choseong Search) 완벽 지원
-  - 복사 출처 애플리케이션 표시(16×16 아이콘 및 이름) 및 출처 앱 검색 접두어(`app:`, `앱:`) 필터링
+  - 복사 출처 애플리케이션 표시(16×16 아이콘 및 macOS 선호 언어의 이름) 및 출처 앱 검색 접두어(`app:`, `앱:`) 필터링
+  - 모아 붙이기: <kbd>⌃</kbd> <kbd>↵</kbd>로 항목을 고른 순서대로 모으고, <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>↵</kbd>로 줄바꿈으로 이어 한 번에 붙여넣기
   - 자주 쓰는 항목 고정(<kbd>⌘</kbd> <kbd>P</kbd>) 및 섹션 이동(<kbd>⌥</kbd> <kbd>↑</kbd> 또는 <kbd>⌥</kbd> <kbd>↓</kbd>) (Pinned / History)
-  - 서식 없이 붙여넣기(<kbd>⇧</kbd> <kbd>↵</kbd>), 항목 삭제(<kbd>⌘</kbd> <kbd>⌫</kbd>), 종류 필터(`text:`/`img:`/`file:`), 기간별 기록 삭제(15분/1시간/오늘)
+  - 서식 없이 붙여넣기(<kbd>⇧</kbd> <kbd>↵</kbd>), 항목 삭제(<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>), 종류 필터(`text:`/`img:`/`file:`), 기간별 기록 삭제(15분/1시간/오늘)
   - 텍스트 변환 액션(<kbd>⌘</kbd> <kbd>K</kbd> → `Transform Text…`): 대소문자(대문자/소문자/Title/camelCase/snake_case/kebab-case), URL/Base64 인코딩·디코딩, 공백 정리 등 11종 순수 변환
   - 텍스트 미리보기 내 인라인 편집(<kbd>⌘</kbd> <kbd>E</kbd>) 및 검색(<kbd>⌘</kbd> <kbd>F</kbd>)
   - 여러 파일 복사 시 개별 파일명 단위 검색 매칭 및 미리보기 파일 넘기기(<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>[</kbd> 또는 <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>]</kbd>)
@@ -51,13 +52,13 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 - **독립 번역 패널 및 번역 기록 (Translation)**
   - 전역 단축키(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>T</kbd>)로 호출되는 가볍고 독립적인 번역 패널
   - 클립보드 항목 번역(<kbd>⌘</kbd> <kbd>K</kbd> → `Translate This`)
-  - 번역 기록(Translations 모드) 보관, 원문/번역문 언어 방향 전환(<kbd>⌘</kbd> <kbd>S</kbd>), 재번역(<kbd>⌘</kbd> <kbd>O</kbd>), 고정(<kbd>⌘</kbd> <kbd>P</kbd>), 삭제(<kbd>⌘</kbd> <kbd>⌫</kbd>), 원문 복사(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd>)
+  - 번역 기록(Translations 모드) 보관, 원문/번역문 언어 방향 전환(<kbd>⌘</kbd> <kbd>S</kbd>), 재번역(<kbd>⌘</kbd> <kbd>O</kbd>), 고정(<kbd>⌘</kbd> <kbd>P</kbd>), 삭제(<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>), 원문 복사(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd>)
 - **국어·영한/한영 사전 및 백과사전 (<kbd>?</kbd>)**
   - <kbd>?</kbd> 접두어 입력 시 모드 전환 없이 즉시 인라인 사전 검색 환경으로 진입 (`Dictionary` 칩 뱃지)
-  - <kbd>?</kbd> 단독 입력 시 최근 조회한 사전 단어 기록 최신순 탐색 (<kbd>⌘</kbd> <kbd>⌫</kbd>로 삭제)
+  - <kbd>?</kbd> 단독 입력 시 최근 조회한 사전 단어 기록 최신순 탐색 (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>로 삭제)
   - <kbd>?</kbd> 뒤 단어 입력 시 macOS 로컬 시스템 사전(국어/영한/한영) 저지연 실시간 검색 및 뜻풀이 즉시 확인
-  - 단어 뜻풀이 붙여넣기(<kbd>Return</kbd>), 복사(<kbd>⌘</kbd> <kbd>C</kbd>), macOS 사전 앱에서 열기(<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>)
-  - 백과사전 정적 검색 행 선택 시 위키백과 표제어 요약문 및 썸네일 온디맨드 비동기 로딩 (타이핑 중 네트워크 통신 0건 보장)
+  - `표제어: 짧은 뜻` 붙여넣기(<kbd>Return</kbd>, 예: `사과: an apple`), 전체 뜻풀이 복사(<kbd>⌘</kbd> <kbd>C</kbd>), macOS 사전 앱에서 열기(<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>)
+  - 목록 맨 아래 위키백과 행은 브라우저에서 위키백과 문서를 엽니다. 사전 기능은 네트워크에 접속하지 않습니다.
 - **프로젝트 빠른 열기 (Project Open)**
   - 전용 전역 단축키(<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>)로 프로젝트 선택기를 호출하여 로컬 개발 프로젝트를 VS Code에서 즉시 오픈
 - **파일 시스템 경로 및 자동완성 (Path Handling & Completion)**
@@ -71,9 +72,12 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 - **단축키 안내 체계 (Keyboard Discoverability)**
   - 어느 화면에서든 <kbd>⌘</kbd> <kbd>/</kbd>를 눌러 현재 화면의 단축키 치트시트 팝오버 확인 (실시간 검색 및 자동 포커스 지원, 3D 키캡 UI)
   - 런처 하단 28pt 푸터(Footer)에서 현재 상황에 맞는 핵심 단축키 실시간 안내
+- **환경설정 (<kbd>⌘</kbd> <kbd>,</kbd>)**
+  - 런처와 같은 카테고리 사이드바 + 설정 목록 구조 (General · Clipboard · Projects · Search)
+  - 키보드만으로 탐색: <kbd>↑</kbd> <kbd>↓</kbd> 이동, <kbd>←</kbd> <kbd>→</kbd>·<kbd>⌘</kbd> <kbd>1–4</kbd>·<kbd>⌃</kbd> <kbd>Tab</kbd> 탭 전환, <kbd>Esc</kbd> 한 단계 뒤로
 - **Local-First & 프라이버시 보호**
   - 모든 클립보드 이력과 데이터는 사용자 Mac 내 로컬에만 안전하게 저장됩니다.
-  - 사용자가 백과사전 행을 명시적으로 선택해 위키백과 요약을 온디맨드로 조회하는 경우를 제외하고는, 인라인 계산기, 클립보드, 파일 검색 등 모든 기능은 외부 통신, 클라우드 동기화, 사용자 분석 텔레메트리 SDK를 일체 포함하지 않습니다.
+  - 인라인 계산기, 사전, 클립보드, 파일 검색 등 모든 기능은 외부 통신, 클라우드 동기화, 사용자 분석 텔레메트리 SDK를 일체 포함하지 않습니다. 앱은 어떤 서버로도 요청을 보내지 않으며, 위키백과·외부 검색은 기본 웹 브라우저가 열어 처리합니다.
 
 ---
 
@@ -105,11 +109,13 @@ Jeppareu(제빠르)는 반응성이 중요한 핵심 작업 흐름을 네이티�
 | <kbd>⌘</kbd> <kbd>Y</kbd> | 이미지 미리보기 창 열기 |
 | <kbd>⌘</kbd> <kbd>K</kbd> | 선택 항목 추가 액션 메뉴 |
 | <kbd>⌘</kbd> <kbd>R</kbd> | Finder에서 보기 (Reveal in Finder) |
-| <kbd>⌥</kbd> <kbd>↵</kbd> | 터미널에서 열기 (선택한 파일/폴더 위치를 터미널에서 열기) |
+| <kbd>⌥</kbd> <kbd>↵</kbd> | 터미널에서 열기 (선택한 파일/폴더 위치를 터미널에서 열기; 클립보드 행에서는 동작 없음) |
+| <kbd>⌃</kbd> <kbd>↵</kbd> | 클립보드 항목 모으기 / 빼기 (모아 붙이기) |
+| <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>↵</kbd> | 모은 항목을 고른 순서대로 한 번에 붙여넣기 |
 | <kbd>⌘</kbd> <kbd>C</kbd> | 텍스트 복사 / 경로 복사 / 사전 뜻풀이 복사 / 계산 결과 복사 |
 | <kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd> | 사전 결과 항목을 macOS Dictionary.app에서 열기 |
 | <kbd>⇧</kbd> <kbd>↵</kbd> | 텍스트 클립보드 항목을 서식 없이 붙여넣기 |
-| <kbd>⌘</kbd> <kbd>⌫</kbd> | 선택한 클립보드 / 사전 기록 항목 삭제 |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | 선택한 클립보드 / 사전 기록 항목 삭제 |
 | <kbd>Tab</kbd> | 경로 자동완성 (경로 입력 시) / 웹 세션 진입 (일반 검색어 입력 시) |
 | <kbd>Esc</kbd> | 한 단계 뒤로 / 액션 메뉴 닫기 / 런처 닫기 |
 | <kbd>⌘</kbd> <kbd>Q</kbd> | Jeppareu 종료 |
