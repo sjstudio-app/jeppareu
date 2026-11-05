@@ -19,11 +19,19 @@
 - 설치 후 `Jeppareu.app`을 실행하면 Dock에 아이콘이 상주하지 않고 백그라운드 액세서리 프로세스로 대기합니다.
 - 메뉴 막대에는 기본으로 제빠르 아이콘이 표시되며, 환경설정 **General** 탭의 `Show in menu bar`로 숨길 수 있습니다.
 - 실행 중 언제든지 전역 단축키를 눌러 런처를 즉시 호출할 수 있습니다. 앱을 끝내려면 런처에서 <kbd>⌘</kbd> <kbd>Q</kbd>를 누르거나 General 탭의 `Quit Jeppareu`를 누릅니다.
+- 메뉴 막대 아이콘의 메뉴에는 `Open Jeppareu`, `Settings…`, `About Jeppareu`(버전·빌드가 적힌 정보 창), 현재 버전 표시(`Version x.y.z (빌드)`), `Quit Jeppareu`가 있습니다. 메뉴가 열린 채 <kbd>⌥</kbd>를 누르고 있으면 버전 표시가 `Copy Version …`으로 바뀌고, 누르면 버전 정보가 복사됩니다.
+
+### 지금 쓰는 버전 확인
+- 메뉴 막대 아이콘을 숨겼어도 버전을 확인할 수 있습니다.
+  - 환경설정 **About** 탭(<kbd>⌘</kbd> <kbd>5</kbd>): 버전·빌드, `Copy Version Info`, `Release Notes`, `Check for Updates…`.
+  - 런처 **All** 모드에서 `version`, `about`, `버전` 중 하나만 입력하면 맨 위에 `Jeppareu x.y.z (빌드)` 행이 나옵니다. <kbd>Return</kbd>은 버전 정보를 복사하고 런처를 닫고, <kbd>⌘</kbd> <kbd>C</kbd>는 복사만 합니다. 아래에는 같은 단어의 일반 검색 결과가 이어집니다.
+- `Check for Updates…`는 GitHub의 최신 릴리스 페이지를 브라우저로 여는 링크입니다. 앱이 스스로 새 버전을 확인하지는 않습니다.
 
 ### 런처 전역 단축키 (<kbd>⌥</kbd> <kbd>Space</kbd>)
 - 기본 단축키: **<kbd>⌥</kbd> <kbd>Space</kbd> (Option-Space)**
 - 단축키를 누르면 화면 중앙에 즉시 런처 입력창이 나타나며 텍스트 입력 포커스를 획득합니다.
 - 런처가 열려 있는 상태에서 다시 <kbd>⌥</kbd> <kbd>Space</kbd>를 누르거나 <kbd>Esc</kbd> 키를 누르면 런처가 닫힙니다.
+- 한글을 입력하는 중(글자가 아직 조합 중일 때)에도 <kbd>⌃</kbd> <kbd>Return</kbd>, <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>Return</kbd>, <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>, 웹 세션의 <kbd>Tab</kbd> / <kbd>⇧</kbd> <kbd>Tab</kbd>은 화면에 보이는 글자 그대로 바로 동작합니다. 조합 중이던 글자는 그 상태로 확정됩니다.
 - 환경설정(<kbd>⌘</kbd> <kbd>,</kbd>)에서 원하는 키 조합으로 언제든지 변경할 수 있습니다.
 
 ### 프로젝트 피커 전역 단축키 (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>)
@@ -52,18 +60,18 @@
 - 검색 결과 목록에서 특정 항목을 선택한 후 **<kbd>⌘</kbd> <kbd>K</kbd>**를 누르면 해당 항목이 지원하는 추가 액션 메뉴가 열립니다.
 - 액션 메뉴 내에서 <kbd>↑</kbd> / <kbd>↓</kbd> 방향키로 액션을 탐색하고 <kbd>Return</kbd>으로 실행하거나, <kbd>Esc</kbd> 또는 일반 문자를 입력하여 액션 메뉴를 닫고 검색으로 돌아올 수 있습니다.
 - **클립보드 항목 액션**: Paste (기본, <kbd>Return</kbd>), Copy to Clipboard (<kbd>⌘</kbd> <kbd>C</kbd>), Paste as Plain Text (<kbd>⇧</kbd> <kbd>↵</kbd>, 텍스트 항목), Collect / Uncollect (<kbd>⌃</kbd> <kbd>↵</kbd>), Paste Collected (<kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>↵</kbd>, 모은 항목이 있을 때), Transform Text… (11종 대소문자·케이스·인코딩·공백 변환 서브메뉴), Translate This (텍스트 항목 번역), Open Preview, Delete from Clipboard History (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>), `Clear Last 15 Minutes…` / `Clear Last Hour…` / `Clear Today…`. 보류 중인 민감 항목에는 `Keep in History…`가 나타납니다.
-- **파일 항목 액션**: Open / Open Directory / Launch Application (기본, <kbd>Return</kbd>), Reveal in Finder (<kbd>⌘</kbd> <kbd>R</kbd>), Copy Path (<kbd>⌘</kbd> <kbd>C</kbd>), Open in Terminal (<kbd>⌥</kbd> <kbd>↵</kbd>), Open With….
+- **파일 항목 액션**: Open / Open Directory / Launch Application (기본, <kbd>Return</kbd>), Reveal in Finder (<kbd>⌘</kbd> <kbd>R</kbd>), Copy Path (<kbd>⌘</kbd> <kbd>C</kbd>), Open in Terminal (<kbd>⌥</kbd> <kbd>↵</kbd>), Open With…. 경로 기록 행에는 Delete from Path History (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>)와 `Clear All Path History…`가 더 있습니다.
 - **계산기 항목 액션**: Copy and Close (기본, <kbd>Return</kbd>), Copy Result (<kbd>⌘</kbd> <kbd>C</kbd>).
 - **사전 항목 액션**: 뜻풀이 붙여넣기 (기본, <kbd>Return</kbd>), 뜻풀이 복사 (<kbd>⌘</kbd> <kbd>C</kbd>), 사전 앱에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd> 또는 <kbd>⌘</kbd> <kbd>O</kbd>), 사전 기록에서 삭제 (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>, 히스토리 항목), 전체 사전 기록 삭제 (`Clear All Dictionary History…`).
 - 외부 검색 제공자는 <kbd>⌘</kbd> <kbd>K</kbd> 메뉴에 나오지 않습니다. 웹 검색은 <kbd>Tab</kbd>으로 들어가는 웹 세션에서 합니다(아래 「외부 검색」).
 - 프로젝트 피커에서는 <kbd>⌘</kbd> <kbd>K</kbd>가 동작하지 않습니다. 프로젝트는 <kbd>Return</kbd>으로 VS Code에서 열고, <kbd>⌘</kbd> <kbd>R</kbd>로 Finder에서 보거나 <kbd>⌘</kbd> <kbd>C</kbd>로 폴더 경로를 복사할 수 있습니다.
 
 ### 환경설정 (<kbd>⌘</kbd> <kbd>,</kbd>)
-런처가 활성화된 상태에서 **<kbd>⌘</kbd> <kbd>,</kbd>** (또는 메뉴 막대의 Settings, 앱 재실행)를 누르면 설정 창이 열립니다. 런처가 떠 있던 화면에 열리고, 이미 열려 있으면 위치와 탭을 유지한 채 앞으로 옵니다. 탭은 네 개입니다.
+런처가 활성화된 상태에서 **<kbd>⌘</kbd> <kbd>,</kbd>** (또는 메뉴 막대의 Settings, 앱 재실행)를 누르면 설정 창이 열립니다. 런처가 떠 있던 화면에 열리고, 이미 열려 있으면 위치와 탭을 유지한 채 앞으로 옵니다. 탭은 다섯 개입니다(General, Clipboard, Projects, Search, About).
 
 - **창 구성과 키보드 탐색**: 왼쪽 카테고리 사이드바와 오른쪽 설정 목록으로 나뉘며, 한 탭의 모든 섹션이 하나의 스크롤 영역에 이어집니다. 카테고리를 고르면 그 섹션의 첫 설정으로 이동합니다.
   - <kbd>↑</kbd> <kbd>↓</kbd>: 카테고리 또는 설정 행 이동. <kbd>Return</kbd>: 스위치 전환, 메뉴 열기, 버튼 누르기, 단축키 녹화.
-  - <kbd>←</kbd> <kbd>→</kbd>, <kbd>⌘</kbd> <kbd>1–4</kbd>, <kbd>⌃</kbd> <kbd>Tab</kbd>: 탭 전환. <kbd>⌘</kbd> <kbd>W</kbd>: 창 닫기.
+  - <kbd>←</kbd> <kbd>→</kbd>, <kbd>⌘</kbd> <kbd>1–5</kbd>, <kbd>⌃</kbd> <kbd>Tab</kbd>: 탭 전환. <kbd>⌘</kbd> <kbd>W</kbd>: 창 닫기.
   - <kbd>Esc</kbd>: 한 단계씩 물러나며(입력란 → 설정 목록 → 사이드바) 마지막에 창을 닫습니다. <kbd>⌘</kbd> <kbd>/</kbd>로 단축키 안내를 볼 수 있습니다.
 
 - **General 탭**:
@@ -87,6 +95,9 @@
 - **Search 탭**:
   - `Custom Providers`: 사용자 정의 외부 검색 제공자를 추가·수정·삭제하고, 켜고 끄거나 순서를 바꿉니다.
   - `Built-in Providers`: 내장 제공자와 예약된 트리거 키워드를 읽기 전용으로 보여줍니다.
+- **About 탭**:
+  - `Jeppareu`: 버전·빌드와 `Copy Version Info`(버그 신고에 붙일 버전 정보 복사), `Release Notes`(이 버전의 GitHub 릴리스 노트), `Check for Updates…`(최신 릴리스 페이지 열기).
+  - `Links`: 웹사이트, 지원 및 버그 신고(GitHub Issues), 사용권 계약(EULA).
 
 ---
 
@@ -100,8 +111,10 @@
 5. 복사만 하고 붙여넣지는 않으려면 <kbd>⌘</kbd> <kbd>K</kbd> > `Copy to Clipboard`(또는 <kbd>⌘</kbd> <kbd>C</kbd>)를 선택합니다.
 6. **출처 애플리케이션 필터링 (`app:` / `앱:`)**:
    - 검색창에 `app:<앱이름>` 또는 `앱:<앱이름>`(예: `app:Safari`, `앱:텍스트`)을 입력하면 해당 앱에서 복사된 클립보드 항목만 즉시 필터링하여 탐색할 수 있습니다. macOS 선호 언어의 앱 이름, 영어 이름, 번들 ID(`app:com.apple.text`) 어느 것으로도 찾을 수 있습니다.
-   - 필터는 첫 공백에서 끝나므로 여러 단어 이름은 앞부분만 입력합니다(`앱:텍스트 편집기` 대신 `앱:텍스트`).
-   - 각 클립보드 행의 좌측에는 복사 당시의 출처 애플리케이션 아이콘(16×16)과 함께, 출처 앱 이름이 macOS 선호 언어로 표시됩니다(예: 한국어 환경에서 "텍스트 편집기").
+   - 여러 단어로 된 이름도 그대로 입력하면 됩니다(행의 앱 아이콘에 포인터를 올리면 보이는 이름). `앱:텍스트 편집기 보고서`는 텍스트 편집기에서 복사한 항목 중 「보고서」를 찾습니다. 클립보드 기록에 있는 앱의 이름으로 이어지는 단어까지가 앱 이름이고, 그다음부터가 검색어입니다.
+   - 앱 이름이 어디서 끝나는지 직접 정하려면 따옴표로 감쌉니다(`앱:"텍스트 편집기" 보고서`). 곧은 따옴표와 둥근 따옴표(“ ”) 모두 됩니다.
+   - 각 클립보드 행의 종류 아이콘 오른쪽 아래에 복사 당시의 출처 애플리케이션 아이콘(16×16)이 작은 배지로 겹쳐 표시됩니다. 배지에 포인터를 올리면 Dock처럼 그 위에 출처 앱 이름이 macOS 선호 언어로 말풍선에 나타납니다(예: 한국어 환경에서 "텍스트 편집기"). VoiceOver도 행을 읽을 때 앱 이름을 함께 읽습니다.
+   - 고정 항목의 핀과 민감 항목의 자물쇠 표시는 제목 앞에, <kbd>⌘</kbd> <kbd>1–9</kbd> 키 표시는 행의 오른쪽 끝에 있습니다.
 7. **모아 붙이기 (Paste Collected)**:
    - 클립보드 항목에서 <kbd>⌃</kbd> <kbd>Return</kbd>을 누르면 그 항목을 모으고(Collect), 다시 누르면 뺍니다(Uncollect). 고른 순서대로 1, 2, 3… 번호 배지가 붙고, 검색어를 바꿔도 순서는 유지됩니다.
    - <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>Return</kbd>을 누르면 모은 항목을 고른 순서대로 줄바꿈으로 이어 한 번에 붙여넣습니다.
@@ -143,8 +156,13 @@
 ### 파일 시스템 검색 및 직접 경로 입력 (Files Search)
 - **직접 경로 입력 (Direct Path)**:
   - `/`로 시작하는 절대 경로(예: `/Applications`, `/Library`) 또는 `~`로 시작하는 홈 디렉터리 경로(예: `~/Downloads`, `~/Documents`)를 입력하면 즉시 유효성을 검사하여 최상단에 고정 표시합니다.
-- **Spotlight 비동기 파일명 검색**:
-  - 일반 파일명이나 디렉터리명을 입력하면 시스템 Spotlight 인덱스를 통해 백그라운드에서 실시간으로 결과를 찾아 매칭 및 하이라이트합니다.
+- **파일명 검색**:
+  - 일반 파일명이나 디렉터리명을 입력하면 결과를 찾아 매칭 부분을 하이라이트합니다. 홈 폴더 안은 앱이 메모리에 들고 있는 파일명 목록에서, 그 밖은 시스템 Spotlight 인덱스에서 찾습니다. 이 목록은 앱을 실행할 때마다 백그라운드에서 만들어지며, 다 만들어지기 전에는 Spotlight로만 찾습니다.
+  - 이름 중간의 한글(`도면` → `설계도면.png`), 초성(`ㄷㅁ`), 글자를 건너뛴 영문(`flrpln` → `floorplan`)으로도 찾습니다.
+  - 초성 일치는 초성만 친 글자(`ㄷ`)에만 적용됩니다. 완성된 글자는 그 글자와만 맞습니다: `ㄷ`은 `다운로드`를 찾지만 `도`는 찾지 않습니다. 섞어 쳐도 됩니다(`ㄷ면` → `도면`). 클립보드 검색도 같습니다.
+  - 숨김 항목, `~/Library`, `node_modules` 같은 빌드 산출물 폴더, 다른 볼륨은 이 목록에 없습니다. 이런 곳은 Spotlight 결과나 직접 경로 입력, 아래 경로 기록으로 찾습니다.
+  - 공백으로 단어를 나누면 폴더 이름과 파일 이름을 섞어 순서와 상관없이 찾습니다. 예: `인테리어 도면`, `도면 인테리어` → `인테리어 자료/평면도면.png`.
+  - 업데이트 후 처음 실행할 때 macOS가 데스크탑·문서·다운로드 폴더 접근을 물을 수 있습니다. 허용하면 그 폴더도 검색됩니다.
 - **실행 동작**:
   - 디렉터리: Finder에서 해당 폴더를 엽니다.
   - 일반 파일: macOS 기본 연결 애플리케이션으로 파일을 엽니다.
@@ -152,6 +170,22 @@
   - **터미널에서 열기 (<kbd>⌥</kbd> <kbd>Return</kbd>)**:
     - 파일이나 디렉터리 항목에서 <kbd>⌥</kbd> <kbd>Return</kbd>(또는 <kbd>⌘</kbd> <kbd>K</kbd> > `Open in Terminal`)을 누르면 환경설정 **General** 탭에서 지정한 터미널 에뮬레이터(macOS Terminal, iTerm2, Ghostty, Warp, Alacritty)로 해당 디렉터리를 엽니다.
     - 선택한 대상이 파일인 경우 해당 파일이 위치한 상위 디렉터리로 터미널 세션이 열립니다.
+
+### 경로 기록 (Path History)
+런처에서 연 파일·폴더·앱은 경로 기록에 남아, 다시 검색하지 않고 고를 수 있습니다.
+
+- **기록되는 때**: 런처에서 열기(<kbd>Return</kbd>, <kbd>⌘</kbd> <kbd>1–9</kbd>, 더블클릭), Reveal in Finder(<kbd>⌘</kbd> <kbd>R</kbd>), Open in Terminal(<kbd>⌥</kbd> <kbd>↵</kbd>), 앱 실행, Open With…에 성공했을 때입니다. 경로 복사(<kbd>⌘</kbd> <kbd>C</kbd>), 미리보기, 드래그, 프로젝트 선택기에서 연 프로젝트, 런처 밖(Finder, Dock 등)에서 연 항목은 기록되지 않습니다.
+- **최근 200개**까지 최신순으로 남고, 다시 열면 맨 위로 올라갑니다.
+- **보는 방법**:
+  - **Files** 모드에서 검색어를 비우면 경로 기록이 최신순으로 나옵니다. 행마다 마지막으로 연 시각이 표시됩니다.
+  - 어느 모드에서든 `경로:` 또는 `path:`를 입력하면 같은 목록이 나오고, 뒤에 글자를 이어 치면(`경로:도면`) 경로 기록 안에서만 찾습니다.
+  - 일반 파일 검색(Files·All 모드)에서도 최근에 연 경로는 비슷하게 일치하는 다른 결과보다 위에 나옵니다.
+- **동작**: 기록 행도 일반 파일 행과 같습니다. <kbd>Return</kbd>은 폴더를 Finder로, 파일을 기본 앱으로 열고, 앱을 실행합니다. <kbd>⌘</kbd> <kbd>K</kbd>, <kbd>⌘</kbd> <kbd>C</kbd>, <kbd>⌥</kbd> <kbd>↵</kbd>도 그대로 됩니다.
+- **옮겨졌거나 지워진 경로**: 목록을 보여 줄 때는 파일이 있는지 확인하지 않습니다. 그런 행을 열면 「File unavailable — moved or deleted.」 안내가 뜨고 그 경로는 기록에서 빠집니다.
+- **지우기**:
+  - 기록 행에서 <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd>: 그 경로만 지웁니다.
+  - 기록 행에서 <kbd>⌘</kbd> <kbd>K</kbd> > `Clear All Path History…`: 지울 개수를 확인한 뒤 경로 기록 전체를 지웁니다.
+  - 기록을 끄는 설정은 없습니다. 저장 위치는 [개인정보 처리방침](PRIVACY.md)에 있습니다.
 
 ### 프로젝트 열기 (Project Open)
 1. 환경설정 **Projects** 탭에서 `Add Project…`로 자주 쓰는 프로젝트 디렉터리를 먼저 등록합니다. 위치 제한은 없으며, `~/code` 아래가 아니어도 됩니다.
@@ -286,7 +320,7 @@
 ### 버그 신고 (Bug Report)
 문제가 발생한 경우 [GitHub Issues](https://github.com/sjstudio-app/jeppareu/issues)에서 **New Issue**를 생성해 주세요. 빠른 원인 파악을 위해 다음 정보를 포함해 주시면 도움이 됩니다:
 
-1. **macOS 버전**: (예: macOS 15.0 Sequoia, Apple Silicon M1/M2/M3/M4)
+1. **제빠르 버전과 macOS 버전**: 환경설정 **About** 탭의 `Copy Version Info`(또는 런처 All 모드에서 `버전` 입력 후 <kbd>⌘</kbd> <kbd>C</kbd>)로 복사한 한 줄을 붙여 주세요. 제빠르 버전·빌드와 macOS 버전이 함께 들어 있습니다. 칩 종류(Apple Silicon M1/M2/M3/M4)도 적어 주시면 도움이 됩니다.
 2. **증상 설명**: 기대했던 동작과 실제로 발생한 현상
 3. **재현 단계**: 문제를 재현할 수 있는 구체적인 순서
 4. **손쉬운 사용 권한 부여 여부**: 허용됨 / 허용되지 않음
